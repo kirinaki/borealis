@@ -1,0 +1,19 @@
+{
+  "name": "alkemy/serel",
+  "type": "project",
+  "require": {
+    "twig/twig": "^3.7",
+    "phpmailer/phpmailer": "^6.9",
+    "htmlburger/carbon-fields": "^3.6",
+    "astrahoshi/boreal-core": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+  ],
+  "minimum-stability": "stable"
+}
