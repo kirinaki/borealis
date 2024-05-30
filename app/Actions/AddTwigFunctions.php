@@ -2,7 +2,8 @@
 
 namespace App\Actions;
 
-use Astrahoshi\BorealCore\Contracts\Registrable;
+
+use Core\Contracts\Registrable;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 

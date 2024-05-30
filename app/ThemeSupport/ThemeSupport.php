@@ -2,8 +2,7 @@
 
 namespace App\ThemeSupport;
 
-use Astrahoshi\BorealCore\Contracts\Registrable;
+use Core\Contracts\Registrable;
 
-abstract class ThemeSupport implements Registrable
-{
+abstract class ThemeSupport implements Registrable {
 }

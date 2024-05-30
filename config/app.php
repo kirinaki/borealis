@@ -19,7 +19,6 @@ return [
         \App\Actions\BootCarbonFields::class,
         \App\Actions\AddTwigFunctions::class,
         \App\Actions\SetGeneralContext::class,
-        \App\Actions\AddCommonFieldsAction::class,
     ],
 
     "theme_supports" => [

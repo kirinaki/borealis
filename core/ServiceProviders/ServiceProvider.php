@@ -2,7 +2,6 @@
 
 namespace Core\ServiceProviders;
 
-use Core\Application;
 use DI\Container;
 
 abstract class ServiceProvider {

@@ -2,7 +2,8 @@
 
 namespace App\PostTypes;
 
-use Astrahoshi\BorealCore\Contracts\Registrable;
+
+use Core\Contracts\Registrable;
 
 abstract class PostType implements Registrable
 {
