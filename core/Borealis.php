@@ -4,6 +4,7 @@ namespace Core;
 
 
 use DI\Container;
+use Core\Facades\{Facade, Config};
 
 class Borealis
 {
@@ -11,12 +12,15 @@ class Borealis
     public static function start(): void
     {
         $app = new Container([
-            "config.app" => require_once __DIR__ . "/../config/app.php",
-            "config.mail" => require_once __DIR__ . "/../config/mail.php"
+            "configuration" => [
+                "app" => require_once __DIR__ . "/../config/app.php",
+                "mail" => require_once __DIR__ . "/../config/mail.php"
+            ],
+            "config" => \DI\get(\Core\Support\Config::class)
         ]);
+        Facade::setFacadeApplication($app);
 
-        $serviceProviders = $app->get("config.app");
-        foreach ($serviceProviders["providers"] as $serviceProvider) {
+        foreach (Config::get("app.providers") as $serviceProvider) {
             (new $serviceProvider($app))->register();
         }
     }

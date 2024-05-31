@@ -7,8 +7,7 @@ use Core\ServiceProviders\ServiceProvider;
 class ThemeSupportServiceProvider extends ServiceProvider {
 
 	public function register(): void {
-		$classes = $this->app->get( "config.app" )["theme_supports"];
-		foreach ( $classes as $item ) {
+		foreach ( \Core\Facades\Config::get("app.theme_supports") as $item ) {
 			( new $item )->register();
 		}
 	}

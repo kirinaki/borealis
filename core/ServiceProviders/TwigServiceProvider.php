@@ -11,14 +11,13 @@ class TwigServiceProvider extends ServiceProvider
     {
         global $loader;
         global $twig;
-        $config = $this->app->get("config.app");
 
         $loader = new FilesystemLoader([
             dirname(__DIR__) . '/../resources'
         ]);
 
         $twig = new Environment($loader, [
-            'debug' => $config["debug"],
+            'debug' => \Core\Facades\Config::get("app.debug"),
         ]);
         $twig->addExtension(new \Twig\Extension\DebugExtension());
     }

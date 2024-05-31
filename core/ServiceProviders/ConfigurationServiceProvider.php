@@ -4,8 +4,7 @@ namespace Core\ServiceProviders;
 
 class ConfigurationServiceProvider extends ServiceProvider {
 	public function register(): void {
-		$configurationClasses = $this->app->get( "config.app" )["configuration"];
-		foreach ( $configurationClasses as $item ) {
+		foreach ( \Core\Facades\Config::get("app.configuration") as $item ) {
 			( new $item )->register();
 		}
 	}
