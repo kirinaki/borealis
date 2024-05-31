@@ -15,6 +15,10 @@ return [
         \App\ServiceProviders\ThemeSupportServiceProvider::class,
     ],
 
+    "aliases" => [
+        "config" => \Core\Facades\Config::class
+    ],
+
     "configuration" => [
         \App\Actions\BootCarbonFields::class,
         \App\Actions\AddTwigFunctions::class,
