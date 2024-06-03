@@ -1,3 +1,3 @@
 <?php
 
-echo $twig->render('views/404.twig', $context);
+\Core\Facades\View::render("views/404", $context);
