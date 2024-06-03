@@ -1,4 +1,4 @@
-# Boreal
+# Borealis
 
 Boreal is an open-source WordPress theme designed to offer a highly functional development experience. With customizable features, Boreal adapts to a wide variety of websites, from personal blogs to corporate sites. This theme includes Vite, Twig, and an architecture highly inspired by Laravel to provide a more agile and efficient development process.
 
