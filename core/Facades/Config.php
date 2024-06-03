@@ -2,10 +2,13 @@
 
 namespace Core\Facades;
 
+/**
+ * @method static get(string $key): string|null
+ */
 class Config extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
-       return "config";
+        return \Core\Support\Config::class;
     }
 }

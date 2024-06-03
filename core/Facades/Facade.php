@@ -6,12 +6,9 @@ abstract class Facade
 {
     protected static $app;
 
-    protected static function getFacadeAccessor()
-    {
-        throw new \Exception('Facade does not implement getFacadeAccessor method.');
-    }
+    protected abstract static function getFacadeAccessor();
 
-    public static function setFacadeApplication($app)
+    public static function setFacadeApplication($app): void
     {
         static::$app = $app;
     }
