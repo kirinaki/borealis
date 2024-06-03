@@ -1,4 +1,4 @@
 <?php
 
-
-echo $twig->render('views/index.twig', $context);
+global $context;
+\Core\Facades\View::render("views/index", $context);

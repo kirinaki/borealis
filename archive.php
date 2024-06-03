@@ -1,4 +1,3 @@
 <?php
 
-
-echo $twig->render('views/archive.twig', $context);
+\Core\Facades\View::render("views/archive", $context);
