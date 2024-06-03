@@ -18,7 +18,7 @@ export default ({mode}) => {
             copyPublicDir: false,
             manifest: true,
             rollupOptions: {
-                input: ['assets/js/main.js', 'assets/scss/styles.scss'],
+                input: ['resources/js/main.js', 'resources/css/main.css'],
             },
         },
         plugins: [
