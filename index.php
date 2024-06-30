@@ -1,4 +1,5 @@
 <?php
 
-global $context;
-\Core\Facades\View::render("views/index", $context);
+use Kirinaki\Framework\Facades\View;
+
+View::render("views/index");
