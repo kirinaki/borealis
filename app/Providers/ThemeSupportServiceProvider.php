@@ -2,19 +2,15 @@
 
 namespace App\Providers;
 
-use Core\ServiceProviders\ThemeSupportServiceProvider as ServiceProvider;
+use \Kirinaki\Framework\ServiceProviders\ThemeSupportServiceProvider as ServiceProvider;
+use Kirinaki\Framework\Wordpress\ThemeSupport\MenusThemeSupport;
+use Kirinaki\Framework\Wordpress\ThemeSupport\PostThumbnailThemeSupport;
 
 class ThemeSupportServiceProvider extends ServiceProvider
 {
-    public function register(): void
+    public function boot(): void
     {
-        $this->registerThemeSupport(\Core\Support\ThemeSupport\AutomaticFeedLinksThemeSupport::class);
-        $this->registerThemeSupport(\Core\Support\ThemeSupport\Html5ThemeSupport::class);
-        $this->registerThemeSupport(\Core\Support\ThemeSupport\PostFormatThemeSupport::class);
-        $this->registerThemeSupport(\Core\Support\ThemeSupport\PostThumbnailThemeSupport::class);
-        $this->registerThemeSupport(\Core\Support\ThemeSupport\TitleTagThemeSupport::class);
-        $this->registerThemeSupport(\Core\Support\ThemeSupport\MenusThemeSupport::class);
+        $this->add(PostThumbnailThemeSupport::class);
+        $this->add(MenusThemeSupport::class);
     }
-
-
 }

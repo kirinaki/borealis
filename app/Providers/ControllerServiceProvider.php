@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use \Core\Controllers\ControllerServiceProvider as ServiceProvider;
+use \Kirinaki\Framework\ServiceProviders\ControllerServiceProvider as ServiceProvider;
 
 class ControllerServiceProvider extends ServiceProvider
 {

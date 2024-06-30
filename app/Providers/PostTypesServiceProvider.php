@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use Core\PostTypes\PostTypeServiceProvider as ServiceProvider;
+use \Kirinaki\Framework\ServiceProviders\PostTypeServiceProvider as ServiceProvider;
 
 class PostTypesServiceProvider extends ServiceProvider
 {
