@@ -3,10 +3,7 @@
   "type": "project",
   "require": {
     "php": "^8.2",
-    "twig/twig": "^3.7",
-    "phpmailer/phpmailer": "^6.9",
-    "htmlburger/carbon-fields": "^3.6",
-    "php-di/php-di": "^7.0"
+    "kirinaki/framework": "v1.0.0-beta.1"
   },
   "autoload": {
     "psr-4": {
@@ -17,8 +14,5 @@
   "license": "MIT",
   "authors": [
   ],
-  "minimum-stability": "stable",
-  "require-dev": {
-    "symfony/var-dumper": "^7.1"
-  }
+  "minimum-stability": "stable"
 }
