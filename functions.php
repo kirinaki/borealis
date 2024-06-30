@@ -1,5 +1,5 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
-\Core\Vite::start();
-\Core\Borealis::start();
+\Kirinaki\Framework\Vite::start();
+\Kirinaki\Framework\Borealis::start(__DIR__);
