@@ -2,15 +2,16 @@
 
 namespace App\Actions;
 
+use \Kirinaki\Framework\Actions\Action as BaseAction;
 
-use Core\Contracts\Registrable;
+abstract class Action extends BaseAction
+{
+    protected string $hook = "init";
 
-abstract class Action implements Registrable {
-	protected string $hook = "init";
+    public function register(): void
+    {
+        add_action($this->hook, [$this, "handle"]);
+    }
 
-	public function register(): void {
-		add_action( $this->hook, [ $this, "handle" ] );
-	}
-
-	public abstract function handle(): void;
+    public abstract function handle(): void;
 }
