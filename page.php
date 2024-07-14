@@ -1,4 +1,5 @@
 <?php
 
-$context['post'] = $post;
-\Core\Facades\View::render("views/page", $context);
+use Kirinaki\Framework\Facades\View;
+
+View::render("views/page", compact("post"));

@@ -1,3 +1,5 @@
 <?php
 
-\Core\Facades\View::render("views/404", $context);
+use Kirinaki\Framework\Facades\View;
+
+View::render("views/404");

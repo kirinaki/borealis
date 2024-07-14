@@ -1,3 +1,5 @@
 <?php
 
-\Core\Facades\View::render("views/archive", $context);
+use Kirinaki\Framework\Facades\View;
+
+View::render("views/archive");
