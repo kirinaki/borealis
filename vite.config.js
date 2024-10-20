@@ -1,27 +1,38 @@
 import {defineConfig, loadEnv} from 'vite'
+import fs from "fs";
 
 export default ({mode}) => {
     process.env = {...process.env, ...loadEnv(mode, process.cwd())}
 
     return defineConfig({
-        base: `/wp-content/themes/${process.env.VITE_THEME_FOLDER}/public`,
         publicDir: 'public',
-        server: {
-            host: 'localhost',
-            open: process.env.VITE_SITE_URL,
-            preTransformRequests: true
-        },
         build: {
             outDir: 'public/dist',
             assetsDir: '.',
             emptyOutDir: true,
             copyPublicDir: false,
-            manifest: true,
+            manifest: "manifest.json",
             rollupOptions: {
-                input: ['resources/js/main.js', 'resources/css/main.css'],
+                input: ['resources/js/main.ts', 'resources/css/main.css'],
             },
         },
         plugins: [
+            {
+                name: "hot-file",
+                configureServer(server) {
+                    const file = "./public/hot"
+                    fs.writeFileSync(file, "")
+
+                    process.on("exit", () => {
+                        if (fs.existsSync(file)) {
+                            fs.rmSync(file)
+                        }
+                    })
+                    process.on('SIGINT', () => process.exit())
+                    process.on('SIGTERM', () => process.exit())
+                    process.on('SIGHUP', () => process.exit())
+                },
+            },
             {
                 name: 'twig-reload',
                 handleHotUpdate({file, server}) {
