@@ -1,5 +1,6 @@
 <?php
 
-use Kirinaki\Framework\Facades\View;
+use Kirinaki\Framework\Application\Application;
+use Kirinaki\Framework\Support\Facades\View;
 
-View::render("views/index");
+View::render("index", ["version" => Application::VERSION]);
