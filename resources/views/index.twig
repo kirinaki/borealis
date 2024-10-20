@@ -1,7 +1,45 @@
 {% extends "layouts/base.twig" %}
 
 {% block content %}
-    <div style="height: calc(100dvh - 32px); display: flex; justify-content: center; align-items: center; font-family: 'Helvetica',serif">
-        <h1>Theme loaded successfully 🎉</h1>
-    </div>
+
+    <style>
+        body {
+            background-color: #334052;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .version {
+            color: white;
+            font-size: x-large;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+        }
+
+        .logo {
+            width: 200px;
+            @media (min-width: 640px) {
+                width: 400px;
+            }
+            @media (min-width: 1280px) {
+                width: 500px;
+            }
+        }
+    </style>
+
+    <main class="container">
+        <div>
+            <img class="logo" src="https://raw.githubusercontent.com/kirinaki/art/refs/heads/main/borealis-logo-lg.svg"
+                 alt="logo">
+            <div class="version">{{ version }}</div>
+        </div>
+    </main>
+
 {% endblock %}
