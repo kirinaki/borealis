@@ -1,7 +1,32 @@
 {% extends "layouts/base.twig" %}
 
 {% block content %}
-    <div style="height: calc(100dvh - 32px); display: flex; justify-content: center; align-items: center; font-family: 'Helvetica',serif">
-        <h1>Not found</h1>
-    </div>
+    <style>
+        body {
+            background-color: #334052;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .version {
+            color: white;
+            font-size: x-large;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+        }
+
+    </style>
+
+    <main class="container">
+        <div>
+            <div class="version">Not found</div>
+        </div>
+    </main>
 {% endblock %}
