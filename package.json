@@ -3,8 +3,9 @@
 	"version": "1.0.0",
 	"main": "main.js",
 	"license": "MIT",
+	"type": "module",
 	"devDependencies": {
-		"vite": "^4.3.1"
+		"vite": "^5.4.8"
 	},
 	"scripts": {
 		"dev": "vite",
