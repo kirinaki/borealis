@@ -1,5 +1,5 @@
 <?php
 
-use Kirinaki\Framework\Facades\View;
+use Kirinaki\Framework\Support\Facades\View;
 
-View::render("views/404");
+View::render("404");
